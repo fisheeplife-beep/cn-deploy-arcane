@@ -1,0 +1,3 @@
+ERROR: docker not found. Path A (pull / compose) is not verifiable on this host.
+Pinned image: ghcr.io/getarcaneapp/manager@sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+Use ./scripts/probe-images.sh to re-check the index without Docker.

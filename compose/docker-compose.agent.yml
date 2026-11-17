@@ -1,0 +1,34 @@
+# Advanced: remote Agent (not the default new-install path).
+# Run this on the remote Docker host after the Manager issues an
+# enrollment token. Persistent /app/data is required: a single-use
+# token is refused on the second start if the volume is missing.
+#
+# Pin is the v3.0.1 agent index digest, verified identical on GHCR,
+# Docker Hub and Quay on 2026-11-17. The retired name
+# ghcr.io/getarcaneapp/arcane-headless is gone for v3 tags; its
+# :latest is frozen at v2.17.3.
+
+name: arcane-agent-cn
+
+services:
+  arcane-agent:
+    image: ${ARCANE_AGENT_IMAGE_REPO:-ghcr.io/getarcaneapp/agent}@sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+    container_name: arcane-agent
+    environment:
+      ARCANE_AGENT: "true"
+      ARCANE_AGENT_TRANSPORT: ${ARCANE_AGENT_TRANSPORT:-auto}
+      ARCANE_AGENT_TOKEN: ${ARCANE_AGENT_TOKEN}
+      ARCANE_MANAGER_API_URL: ${ARCANE_MANAGER_API_URL}
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
+      TZ: ${TZ:-Asia/Shanghai}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - agent-data:/app/data
+    cgroup: host
+    restart: unless-stopped
+    stop_grace_period: 15s
+    # The v3 agent listens on no port. Do not add a healthcheck on 3553.
+
+volumes:
+  agent-data:

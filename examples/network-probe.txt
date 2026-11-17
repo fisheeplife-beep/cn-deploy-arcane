@@ -1,0 +1,27 @@
+# network probe 2026-11-17 20:49:55 +0800
+Host: Linux x86_64
+
+--- source / docs / releases ---
+HTTP 200  2.962704s  GitHub repo  https://github.com/getarcaneapp/arcane
+HTTP 200  3.065639s  Release v3.0.1  https://github.com/getarcaneapp/arcane/releases/tag/v3.0.1
+HTTP 200  0.137438s  LICENSE @ v3.0.1  https://raw.githubusercontent.com/getarcaneapp/arcane/v3.0.1/LICENSE
+HTTP 200  0.157462s  Official compose.basic.yaml @ v3.0.1  https://raw.githubusercontent.com/getarcaneapp/arcane/v3.0.1/docker/examples/compose.basic.yaml
+HTTP 200  0.094163s  Docs site  https://getarcane.app
+HTTP 200  0.134443s  Install docs  https://getarcane.app/docs/get-started/installation
+HTTP 200  0.082439s  Migrate to 3.0 docs  https://getarcane.app/docs/get-started/migrate-v3
+HTTP 200  0.087824s  install.sh  https://getarcane.app/install.sh
+
+--- registries ---
+HTTP 401  0.026824s  GHCR /v2/ (anonymous)  https://ghcr.io/v2/
+HTTP 200  0.036684s  GHCR token (manager pull)  https://ghcr.io/token?service=ghcr.io&scope=repository:getarcaneapp/manager:pull
+HTTP 200  0.044854s  Docker Hub auth  https://auth.docker.io/token?service=registry.docker.io&scope=repository:getarcaneapp/manager:pull
+HTTP 401  0.020399s  Docker Hub registry  https://registry-1.docker.io/v2/
+HTTP 401  0.039419s  Quay /v2/ (anonymous)  https://quay.io/v2/
+HTTP 200  0.083342s  Quay manager tag page  https://quay.io/v2/getarcaneapp/manager/tags/list
+
+--- optional egress (analytics / templates; not required to open the panel) ---
+HTTP 204  1.462703s  Analytics check-in host  https://checkin.getarcane.app
+HTTP 200  0.084543s  Template registry  https://registry.getarcane.app
+
+Codes 200/301/302/401/403 mean the TCP/TLS hop completed. 401 on GHCR /v2/ or Docker Hub /v2/ without a token is expected.
+000/timeout only describes THIS environment; it is not a howto for bypassing regional restrictions.

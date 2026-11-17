@@ -1,0 +1,146 @@
+# image probe 2026-11-17 20:50:41 +0800
+
+=== manager v3.0.1 (required) ===
+OK ghcr.io/getarcaneapp/manager:v3.0.1
+  Docker-Content-Digest: sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+    linux/riscv64: sha256:dae7e31e7ae57ca26c82a99f9a8072c581596b66070c3fc48dbbd02ac7241832
+    linux/arm64: sha256:fe28ce2e92e8d1dae163c5d538728ee45c93957457b4dfcfad030a360643b8c6
+    linux/arm/v7: sha256:c1c2d962fab2ad86cd8722e053df46ed5bac60aab6d4ad64844e0b57c54096d2
+PASS ghcr manager:v3.0.1 digest matches sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+PASS ghcr manager:v3.0.1 linux/amd64 child is sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+OK docker.io/getarcaneapp/manager:v3.0.1
+  Docker-Content-Digest: sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+    linux/riscv64: sha256:dae7e31e7ae57ca26c82a99f9a8072c581596b66070c3fc48dbbd02ac7241832
+    linux/arm64: sha256:fe28ce2e92e8d1dae163c5d538728ee45c93957457b4dfcfad030a360643b8c6
+    linux/arm/v7: sha256:c1c2d962fab2ad86cd8722e053df46ed5bac60aab6d4ad64844e0b57c54096d2
+PASS hub manager:v3.0.1 digest matches sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+PASS hub manager:v3.0.1 linux/amd64 child is sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+OK quay.io/getarcaneapp/manager:v3.0.1
+  Docker-Content-Digest: sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+    linux/riscv64: sha256:dae7e31e7ae57ca26c82a99f9a8072c581596b66070c3fc48dbbd02ac7241832
+    linux/arm64: sha256:fe28ce2e92e8d1dae163c5d538728ee45c93957457b4dfcfad030a360643b8c6
+    linux/arm/v7: sha256:c1c2d962fab2ad86cd8722e053df46ed5bac60aab6d4ad64844e0b57c54096d2
+PASS quay manager:v3.0.1 digest matches sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+PASS quay manager:v3.0.1 linux/amd64 child is sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+
+=== agent v3.0.1 (required) ===
+OK ghcr.io/getarcaneapp/agent:v3.0.1
+  Docker-Content-Digest: sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+    linux/riscv64: sha256:96a8107fd09a63e460e2a71d7f799b87bbdc6ca570e54cf683653c2a439513ca
+    linux/arm64: sha256:7388186d420bf063a8d6a57293bb5057b9d4f35ec30ff5275d73e7a565e882fd
+    linux/arm/v7: sha256:cc4412f20d1ceeb4dbacff509cc5dfaf33b16cf237910c97c0f75c8961ee6a8d
+PASS ghcr agent:v3.0.1 digest matches sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+PASS ghcr agent:v3.0.1 linux/amd64 child is sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+OK docker.io/getarcaneapp/agent:v3.0.1
+  Docker-Content-Digest: sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+    linux/riscv64: sha256:96a8107fd09a63e460e2a71d7f799b87bbdc6ca570e54cf683653c2a439513ca
+    linux/arm64: sha256:7388186d420bf063a8d6a57293bb5057b9d4f35ec30ff5275d73e7a565e882fd
+    linux/arm/v7: sha256:cc4412f20d1ceeb4dbacff509cc5dfaf33b16cf237910c97c0f75c8961ee6a8d
+PASS hub agent:v3.0.1 digest matches sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+PASS hub agent:v3.0.1 linux/amd64 child is sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+OK quay.io/getarcaneapp/agent:v3.0.1
+  Docker-Content-Digest: sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+    linux/riscv64: sha256:96a8107fd09a63e460e2a71d7f799b87bbdc6ca570e54cf683653c2a439513ca
+    linux/arm64: sha256:7388186d420bf063a8d6a57293bb5057b9d4f35ec30ff5275d73e7a565e882fd
+    linux/arm/v7: sha256:cc4412f20d1ceeb4dbacff509cc5dfaf33b16cf237910c97c0f75c8961ee6a8d
+PASS quay agent:v3.0.1 digest matches sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+PASS quay agent:v3.0.1 linux/amd64 child is sha256:e54c087b1f0f068733190cf932421ee973ec5e91ca13bdcd5cd9f7532ee380de
+PASS manager:v3.0.1 platforms include amd64, arm64, arm/v7, riscv64
+
+=== moving tags (informational; do not pin these) ===
+OK ghcr.io/getarcaneapp/manager:v3
+  Docker-Content-Digest: sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+    linux/riscv64: sha256:dae7e31e7ae57ca26c82a99f9a8072c581596b66070c3fc48dbbd02ac7241832
+    linux/arm64: sha256:fe28ce2e92e8d1dae163c5d538728ee45c93957457b4dfcfad030a360643b8c6
+    linux/arm/v7: sha256:c1c2d962fab2ad86cd8722e053df46ed5bac60aab6d4ad64844e0b57c54096d2
+NOTE ghcr manager:v3 currently equals :v3.0.1 on this day; it is still a moving tag.
+OK ghcr.io/getarcaneapp/manager:latest
+  Docker-Content-Digest: sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:2322302702c42b795255c9a2430b02c65b7749705cab16ae80ed478b52e05d79
+    linux/riscv64: sha256:dae7e31e7ae57ca26c82a99f9a8072c581596b66070c3fc48dbbd02ac7241832
+    linux/arm64: sha256:fe28ce2e92e8d1dae163c5d538728ee45c93957457b4dfcfad030a360643b8c6
+    linux/arm/v7: sha256:c1c2d962fab2ad86cd8722e053df46ed5bac60aab6d4ad64844e0b57c54096d2
+NOTE ghcr manager:latest currently equals :v3.0.1 on this day; it is still a moving tag.
+
+=== migration stepping-stone v2.17.3 (informational) ===
+OK ghcr.io/getarcaneapp/manager:v2.17.3
+  Docker-Content-Digest: sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:004bdb15e2bcdd74a84321c7b5b572bd748f10aaa4e1796158fa8bdc5e9dd87a
+    linux/riscv64: sha256:b77cec870f7fbc87160561e18fd1149bccc1d8e89df92a406c1f824cdef22fa6
+    linux/arm64: sha256:424658c21be298e03e4c8af2d061475ff1c8f143dc79e7da02acb719d588bb08
+    linux/arm/v7: sha256:2961ea2204c1b4ee889acec9f6af5c536005a093794c3e8c6103f69471662269
+PASS ghcr manager:v2.17.3 digest matches sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+OK docker.io/getarcaneapp/manager:v2.17.3
+  Docker-Content-Digest: sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:004bdb15e2bcdd74a84321c7b5b572bd748f10aaa4e1796158fa8bdc5e9dd87a
+    linux/riscv64: sha256:b77cec870f7fbc87160561e18fd1149bccc1d8e89df92a406c1f824cdef22fa6
+    linux/arm64: sha256:424658c21be298e03e4c8af2d061475ff1c8f143dc79e7da02acb719d588bb08
+    linux/arm/v7: sha256:2961ea2204c1b4ee889acec9f6af5c536005a093794c3e8c6103f69471662269
+PASS hub manager:v2.17.3 digest matches sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+OK quay.io/getarcaneapp/manager:v2.17.3
+  Docker-Content-Digest: sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:004bdb15e2bcdd74a84321c7b5b572bd748f10aaa4e1796158fa8bdc5e9dd87a
+    linux/riscv64: sha256:b77cec870f7fbc87160561e18fd1149bccc1d8e89df92a406c1f824cdef22fa6
+    linux/arm64: sha256:424658c21be298e03e4c8af2d061475ff1c8f143dc79e7da02acb719d588bb08
+    linux/arm/v7: sha256:2961ea2204c1b4ee889acec9f6af5c536005a093794c3e8c6103f69471662269
+PASS quay manager:v2.17.3 digest matches sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+OK ghcr.io/getarcaneapp/agent:v2.17.3
+  Docker-Content-Digest: sha256:3005364d5aa603a8fe8b51bee26413b473965c3c2dc6c152b0016dd1cdda1cf4
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:26588d55b90aeef4dd758abec258143fcb98ad763bc9358da9e955d3649afe86
+    linux/riscv64: sha256:a8da60008fbefd9b76c268a7b80fc5169b7243f080ab2081de53a0f3eb37ae6e
+    linux/arm64: sha256:a404231d182f193b2b452e590b5e6a489645bbbef96cc4f2aa6f3a4327ebf3a6
+    linux/arm/v7: sha256:511c3816d4b37da662fafa1309ef7057b241f8cc5464f6ae4247559ce30b063f
+
+=== retired GHCR aliases (common trap) ===
+FAIL ghcr.io/getarcaneapp/arcane:v3.0.1 HTTP 404 HTTP Error 404: Not Found {"errors":[{"code":"MANIFEST_UNKNOWN","message":"manifest unknown"}]}
+
+PASS ghcr.io/getarcaneapp/arcane:v3.0.1 is gone (HTTP 404) — use manager/agent for v3
+FAIL ghcr.io/getarcaneapp/arcane:v3 HTTP 404 HTTP Error 404: Not Found {"errors":[{"code":"MANIFEST_UNKNOWN","message":"manifest unknown"}]}
+
+PASS ghcr.io/getarcaneapp/arcane:v3 is gone (HTTP 404) — use manager/agent for v3
+OK ghcr.io/getarcaneapp/arcane:latest
+  Docker-Content-Digest: sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:004bdb15e2bcdd74a84321c7b5b572bd748f10aaa4e1796158fa8bdc5e9dd87a
+    linux/riscv64: sha256:b77cec870f7fbc87160561e18fd1149bccc1d8e89df92a406c1f824cdef22fa6
+    linux/arm64: sha256:424658c21be298e03e4c8af2d061475ff1c8f143dc79e7da02acb719d588bb08
+    linux/arm/v7: sha256:2961ea2204c1b4ee889acec9f6af5c536005a093794c3e8c6103f69471662269
+PASS ghcr.io/getarcaneapp/arcane:latest still resolves, but the digest is the v2.17.3 image (sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7). Pulling :latest here will NOT give you v3.
+OK ghcr.io/getarcaneapp/arcane:v2.17.3
+  Docker-Content-Digest: sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:004bdb15e2bcdd74a84321c7b5b572bd748f10aaa4e1796158fa8bdc5e9dd87a
+    linux/riscv64: sha256:b77cec870f7fbc87160561e18fd1149bccc1d8e89df92a406c1f824cdef22fa6
+    linux/arm64: sha256:424658c21be298e03e4c8af2d061475ff1c8f143dc79e7da02acb719d588bb08
+    linux/arm/v7: sha256:2961ea2204c1b4ee889acec9f6af5c536005a093794c3e8c6103f69471662269
+PASS ghcr.io/getarcaneapp/arcane:v2.17.3 still resolves to the v2.17.3 digest (sha256:2e0dc9f5ef03599181a49baf6470055d82e24d9cb15bbc62498ea642c0f882a7), as expected for this 2.x tag.
+FAIL ghcr.io/getarcaneapp/arcane-headless:v3.0.1 HTTP 404 HTTP Error 404: Not Found {"errors":[{"code":"MANIFEST_UNKNOWN","message":"manifest unknown"}]}
+
+PASS ghcr.io/getarcaneapp/arcane-headless:v3.0.1 is gone (HTTP 404) — use manager/agent for v3
+OK ghcr.io/getarcaneapp/arcane-headless:latest
+  Docker-Content-Digest: sha256:3005364d5aa603a8fe8b51bee26413b473965c3c2dc6c152b0016dd1cdda1cf4
+  platforms: linux/amd64, linux/riscv64, linux/arm64, linux/arm/v7
+    linux/amd64: sha256:26588d55b90aeef4dd758abec258143fcb98ad763bc9358da9e955d3649afe86
+    linux/riscv64: sha256:a8da60008fbefd9b76c268a7b80fc5169b7243f080ab2081de53a0f3eb37ae6e
+    linux/arm64: sha256:a404231d182f193b2b452e590b5e6a489645bbbef96cc4f2aa6f3a4327ebf3a6
+    linux/arm/v7: sha256:511c3816d4b37da662fafa1309ef7057b241f8cc5464f6ae4247559ce30b063f
+PASS ghcr.io/getarcaneapp/arcane-headless:latest still resolves, but the digest is the v2.17.3 image (sha256:3005364d5aa603a8fe8b51bee26413b473965c3c2dc6c152b0016dd1cdda1cf4). Pulling :latest here will NOT give you v3.

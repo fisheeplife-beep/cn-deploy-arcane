@@ -1,0 +1,2 @@
+ERROR: docker not found — cannot smoke a running container on this host.
+Would have checked: http://127.0.0.1:3552/api/health (expect JSON with status UP).

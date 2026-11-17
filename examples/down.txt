@@ -1,0 +1,1 @@
+ERROR: docker not found — nothing to stop on this host.

@@ -1,0 +1,43 @@
+# Path A: official v3 Manager on one Docker host (new install).
+# Pin is the v3.0.1 multi-arch index digest, verified identical on
+# GHCR, Docker Hub and Quay on 2026-11-17. Do not use a floating
+# :latest / :v3 tag in production, and do not use the retired GHCR
+# name ghcr.io/getarcaneapp/arcane (its :latest is frozen at v2.17.3).
+#
+# This is a thin wrapper, not a copy of the official docs compose.
+# Fill local/.env first (see local/.env.example). Secrets stay there.
+
+name: arcane-cn
+
+services:
+  arcane:
+    image: ${ARCANE_IMAGE_REPO:-ghcr.io/getarcaneapp/manager}@sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+    container_name: arcane
+    ports:
+      - "${ARCANE_BIND:-127.0.0.1}:${ARCANE_PORT:-3552}:3552"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - arcane-data:/app/data
+      - ${ARCANE_PROJECTS_DIRECTORY:-/opt/docker}:${ARCANE_PROJECTS_DIRECTORY:-/opt/docker}
+    environment:
+      ARCANE_APP_URL: ${ARCANE_APP_URL:-http://localhost:3552}
+      ARCANE_ENCRYPTION_KEY: ${ARCANE_ENCRYPTION_KEY}
+      ARCANE_PROJECTS_DIRECTORY: ${ARCANE_PROJECTS_DIRECTORY:-/opt/docker}
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
+      TZ: ${TZ:-Asia/Shanghai}
+      # Uncomment to disable the anonymous check-in. The 2.x name
+      # ANALYTICS_DISABLED is ignored in 3.0 and would silently re-enable it.
+      # ARCANE_ANALYTICS_ENABLED: "false"
+    cgroup: host
+    healthcheck:
+      test: ["CMD", "./arcane", "health", "--timeout", "2s"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 15s
+    restart: unless-stopped
+    stop_grace_period: 15s
+
+volumes:
+  arcane-data:

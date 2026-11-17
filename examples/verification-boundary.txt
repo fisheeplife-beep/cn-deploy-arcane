@@ -1,0 +1,40 @@
+# Verification boundary — author box, 2026-11-17, Asia/Shanghai (CST, UTC+8)
+# Host: Linux x86_64, no Docker Engine. See host-snapshot.txt.
+
+Verified on this box:
+- Upstream identity: getarcaneapp/arcane is BSD-3-Clause (Copyright (c) 2025, Kyle Mendell).
+  Default branch main. stargazers_count=9064 at probe time.
+  Latest stable GitHub Release is v3.0.1 (published 2026-11-15T17:05:31Z =
+  2026-11-16 01:05:31 Asia/Shanghai). Commit c614e0d2df6d6bcb6188c1af249f457000c7e96c
+  also carries backend/v3.0.1, cli/v3.0.1, types/v3.0.1.
+- ./scripts/preflight.sh: docker missing (exit 1). git/curl/jq/python3/openssl present.
+  openssl rand -hex 32 produces 64 hex chars + newline (65 bytes); value discarded, no key written.
+- ./scripts/probe-network.sh (exit 0): GitHub, getarcane.app docs, install.sh, raw LICENSE
+  and compose.basic.yaml @ v3.0.1 all HTTP 200. GHCR / Docker Hub / Quay /v2/ anonymous
+  401 as expected; token and tag endpoints 200. checkin.getarcane.app HTTP 204;
+  registry.getarcane.app HTTP 200.
+- ./scripts/probe-images.sh (exit 0): manager:v3.0.1 index digest
+  sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+  and agent:v3.0.1 index digest
+  sha256:4285608a7a085acb8296c5a76261fd1b738a40760dcf46e48a4361240cd94692
+  are identical on GHCR, Docker Hub and Quay. Platforms: linux/amd64, linux/arm64,
+  linux/arm/v7, linux/riscv64. :v3 and :latest currently equal :v3.0.1 (moving tags).
+  Retired GHCR names: arcane:v3.0.1 / arcane:v3 / arcane-headless:v3.0.1 → 404.
+  arcane:latest and arcane-headless:latest still resolve to the v2.17.3 digests.
+- ./scripts/clone-upstream.sh (exit 0): shallow clone of tag v3.0.1 at
+  c614e0d2df6d6bcb6188c1af249f457000c7e96c.
+
+Not verified on this box (and why):
+- docker pull of the pinned digest (no Docker Engine)
+- ./scripts/up-manager.sh / compose up (exit 2, no Docker)
+- ./scripts/smoke.sh against /api/health (exit 2, no Docker)
+- First login, initial-admin-password, forced password change
+- v2→v3 migration on a real 2.x volume (no existing database; do not mint a new key)
+- Remote Agent enrollment, reverse-proxy WebSockets, socket proxy, NAS bind paths
+- Official install.sh / uninstall.sh
+- External Postgres
+- A real Compose project started from the panel
+
+./scripts/up-manager.sh --pull, ./scripts/up-manager.sh, ./scripts/smoke.sh and
+./scripts/down.sh all exited 2 with "docker not found". Their logs are in this
+directory and are failure logs, not a successful stack start.

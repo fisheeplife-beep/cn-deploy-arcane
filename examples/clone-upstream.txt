@@ -1,0 +1,6 @@
+Already cloned: /workspace/cn-deploy-arcane/data/upstream-arcane
+OK v3.0.1 → /workspace/cn-deploy-arcane/data/upstream-arcane
+HEAD c614e0d2df6d6bcb6188c1af249f457000c7e96c
+c614e0d release: 3.0.1
+tags-at-HEAD: backend/v3.0.1 cli/v3.0.1 types/v3.0.1 v3.0.1
+PASS HEAD matches c614e0d2df6d6bcb6188c1af249f457000c7e96c and carries v3.0.1

@@ -1,0 +1,23 @@
+=== Arcane CN preflight (v3 Manager Compose + probes) ===
+
+Host: Linux x86_64
+Time: 2026-11-17 20:49 CST
+Pin: v3.0.1 / commit c614e0d2df6d / ghcr.io/getarcaneapp/manager@sha256:80a2f71c60bc1bff3e618e6e71efec98ad365ba4f0395aa76e234d8ba75e5a99
+Note: path A is a long-running self-hosted panel on port 3552.
+      v2→v3 migration is a separate chapter, not this preflight.
+
+✅ CPU arch x86_64 — official v3.0.1 images include linux/amd64
+✅ CPUs 8
+✅ RAM available ~7 GiB (total ~16 GiB)
+✅ Disk free ~110 GB under /workspace/cn-deploy-arcane
+✅ git present
+✅ curl present
+✅ jq present
+✅ python3 present
+✅ openssl present
+❌ docker missing — required for path A (image pull + Compose). Probes and the shallow clone still work.
+⚠️  projects directory /opt/docker does not exist yet — create it (same absolute path inside the container) before ./scripts/up-manager.sh
+⚠️  No local/.env yet — copy local/.env.example and run ./scripts/generate-key.sh before ./scripts/up-manager.sh
+
+=== summary: 9 ok / 2 warn / 1 bad ===
+Preflight found blockers. Network / image probes and the shallow clone can still run without Docker.
